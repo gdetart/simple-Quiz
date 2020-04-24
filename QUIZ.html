@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <!--
+        QUIZ GAME!
+
+        RULES:
+        / The player must guess correctly a certain amount of questions
+        / Each correct answer gives him one point
+        / Answers could be â€œmultipleâ€ or â€œtrue/falseâ€
+        / At the end of the game, the user must know his total score
+
+        QUESTIONS:
+        / You can get them from this URL ( http://bit.ly/strive_QUIZZ ) or you can write your own
+        / Could be multiple of boolean (true / false)
+        / [EXTRA] Show if the answer was wrong or correct after clicking
+        / [EXTRA] Present them â€œone a timeâ€
+
+        HINTS:
+        / Keep a global variable â€œscoreâ€ for the score
+        / Keep a variable â€œquestionNumberâ€ for the â€œquestionâ€ the user is answering
+        / When â€œquestionNumberâ€ is bigger then the available questions, present the score
+        / Start working with the question saved in a variable, and then include AJAX etc
+        / Start with the easier version and THEN implement the â€œEXTRAsâ€
+        / Please debug everything / try it on the console to be sure of what to expect from your code
+
+        EXTRA:
+        / Show if the answer was wrong or correct after clicking
+        / Present questions one a time
+        / Let the user select difficulty and number of questions (you can get q/a from https://opentdb.com/api.php?amount=10&category=18&difficulty=easy modifying amount and difficulty)
+
+    -->
+
+  <head>
+    <meta charset="utf-8">
+		<title>BingoGame</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito&display=swap" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <h1>
+        Welcome to my QUIZ
+      </h1>
+     <div id="points">
+       <h3>Your Points :</h3>
+       <p id="p"></p>
+      </div>
+
+    <div class="container">
+      <div id="questionContainer">
+        <div id="question">Question</div>
+        <div id="answerBtn"></div>
+      </div>
+      <div id="control">
+        <input type="button" id="nextQuest" value="Next Question" onclick="showQuestion()">
+        <input type="button" id="checkAnswer" value="Check Answer" onclick="checkAnswer()">
+      </div>
+    </div>
+    <script src="quiz.js"></script>
+  </body>
+</html>
